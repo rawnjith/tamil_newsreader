@@ -1,0 +1,37 @@
+{
+  "store_listing": {
+    "title": {
+      "default": "Voice Reader - Multilingual TTS",
+      "en-US": "Voice Reader - Multilingual Text to Speech"
+    },
+    "short_description": {
+      "default": "Convert text to speech in multiple Indian languages",
+      "en-US": "A powerful text-to-speech app supporting multiple Indian languages"
+    },
+    "full_description": {
+      "default": "Voice Reader is a versatile text-to-speech application that supports multiple Indian languages including Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and Gujarati, along with English.\n\nFeatures:\n• Support for 8 languages\n• Read text from direct input\n• Import text from URLs\n• File reading support\n• Adjustable speech rate and pitch\n• Simple and intuitive interface\n• No ads\n• Offline support for basic features\n\nPerfect for:\n• Students learning languages\n• People with visual impairments\n• Content creators\n• Anyone who prefers listening to reading",
+      "en-US": "Voice Reader is a versatile text-to-speech application that supports multiple Indian languages including Tamil, Hindi, Telugu, Malayalam, Kannada, Bengali, and Gujarati, along with English.\n\nFeatures:\n• Support for 8 languages\n• Read text from direct input\n• Import text from URLs\n• File reading support\n• Adjustable speech rate and pitch\n• Simple and intuitive interface\n• No ads\n• Offline support for basic features\n\nPerfect for:\n• Students learning languages\n• People with visual impairments\n• Content creators\n• Anyone who prefers listening to reading"
+    },
+    "keywords": [
+      "text to speech",
+      "tts",
+      "voice",
+      "reader",
+      "indian languages",
+      "tamil",
+      "hindi",
+      "telugu",
+      "multilingual"
+    ],
+    "category": "TOOLS",
+    "content_rating": "PEGI_3",
+    "privacy_policy_url": "https://your-privacy-policy-url.com",
+    "website": "https://your-website.com"
+  },
+  "version_code": 1,
+  "version_name": "1.0.0",
+  "release_notes": {
+    "default": "Initial release of Voice Reader with support for 8 languages",
+    "en-US": "Initial release of Voice Reader with support for 8 languages"
+  }
+}

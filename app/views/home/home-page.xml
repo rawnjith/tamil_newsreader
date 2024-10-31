@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Voice Reader" icon="">
+        <ActionItem tap="onSettings" ios.position="right" android.position="actionBar">
+            <Label text="&#xf013;" class="fas" />
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout rows="auto, *, auto">
+        <!-- Language Selector -->
+        <GridLayout row="0" columns="*, auto" class="p-10">
+            <Label col="0" text="Select Language" class="h3" />
+            <DropDown col="1" items="{{ languages }}" selectedIndex="{{ selectedLanguageIndex }}" 
+                     class="language-dropdown" />
+        </GridLayout>
+
+        <!-- Content Area -->
+        <TabView row="1" selectedIndex="{{ selectedTabIndex }}" class="m-10">
+            <!-- Text Input Tab -->
+            <TabViewItem title="Text">
+                <GridLayout>
+                    <TextView hint="Enter or paste your text here..." text="{{ inputText }}" 
+                              editable="true" class="input-area" />
+                </GridLayout>
+            </TabViewItem>
+
+            <!-- URL Input Tab -->
+            <TabViewItem title="URL">
+                <StackLayout>
+                    <GridLayout columns="*, auto" class="url-input">
+                        <TextField col="0" hint="Enter URL" text="{{ urlInput }}" />
+                        <Button col="1" text="Fetch" tap="{{ onFetchUrl }}" 
+                                class="btn btn-primary btn-rounded-sm" />
+                    </GridLayout>
+                    <ActivityIndicator busy="{{ isLoading }}" />
+                </StackLayout>
+            </TabViewItem>
+
+            <!-- File Input Tab -->
+            <TabViewItem title="File">
+                <StackLayout>
+                    <Button text="Select File" tap="{{ onSelectFile }}" 
+                            class="btn btn-primary btn-rounded-lg" />
+                    <Label text="{{ selectedFileName }}" class="selected-file" />
+                </StackLayout>
+            </TabViewItem>
+        </TabView>
+
+        <!-- Controls -->
+        <GridLayout row="2" columns="auto,auto,auto,auto,auto" class="controls p-10">
+            <Button col="0" text="&#xf048;" tap="{{ onPrevious }}" class="fas control-btn" />
+            <Button col="1" text="{{ isPlaying ? '&#xf04c;' : '&#xf04b;' }}" 
+                    tap="{{ onPlayPause }}" class="fas control-btn" />
+            <Button col="2" text="&#xf04d;" tap="{{ onStop }}" class="fas control-btn" />
+            <Button col="3" text="&#xf051;" tap="{{ onNext }}" class="fas control-btn" />
+            <Label col="4" text="{{ currentTime }}" class="time-label" />
+        </GridLayout>
+    </GridLayout>
+</Page>
